@@ -32,11 +32,11 @@ function _get_tun0() {
 }
 
 
-var AllIPAddressIndicator = class AllIPAddressIndicator extends PanelMenu.Button{
+var Tun0IPAddressIndicator = class AllIPAddressIndicator extends PanelMenu.Button{
 
     _init() {
         // Chaining up to the super-class
-        super._init(0.0, "All IP Addresses Indicator", false);
+        super._init(0.0, "Show tun0 IP", false);
 
         this.buttonText = new St.Label({
             text: 'Loading...',
@@ -76,9 +76,9 @@ var AllIPAddressIndicator = class AllIPAddressIndicator extends PanelMenu.Button
 // In gnome-shell >= 3.32 this class and several others became GObject
 // subclasses. We can account for this change simply by re-wrapping our
 // subclass in `GObject.registerClass()`
-AllIPAddressIndicator = GObject.registerClass(
-    {GTypeName: 'AllIPAddressIndicator'},
-    AllIPAddressIndicator
+Tun0IPAddressIndicator = GObject.registerClass(
+    {GTypeName: 'Tun0IPAddressIndicator'},
+    Tun0IPAddressIndicator
 );
 
 let _indicator;
@@ -87,7 +87,7 @@ function init() {
 }
 
 function enable() {
-    _indicator = new AllIPAddressIndicator();
+    _indicator = new Tun0IPAddressIndicator();
     Main.panel.addToStatusArea('all-ip-addresses-indicator', _indicator);
     _indicator.connect('button-press-event', _toggle);
 }
