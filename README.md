@@ -15,3 +15,11 @@ In the atypical case that you are working on a LAN not connected to the Internet
 
 ## Credits
 This code is based upon a fork of https://github.com/Josholith/gnome-extension-lan-ip-address
+
+<!-- Added from @shiomiyan -->
+## Install
+
+```shell
+mkdir -p ~/.local/share/gnome-shell/extensions
+git clone git@github.com:shiomiyan/show-tun0-ip.git ~/.local/share/gnome-shell/extensions/show-tun0-ip@shell.gnome.org
+```

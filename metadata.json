@@ -1,6 +1,6 @@
 {
-  "description": "Show IP addresses for LAN, WAN IPv6 and VPN in the GNOME panel. Click on the address to cycle trough different interfaces.",
-  "name": "All IP Addresses",
+  "description": "Show tun0(VPN) IP addr",
+  "name": "Show tun0 IP",
   "shell-version": [ "43" ],
   "url": "https://github.com/phavekes/gnome-extension-all-ip-addresses",
   "uuid": "show-tun0-ip@shell.gnome.org",
